@@ -45,7 +45,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-gray-100 relative">
+    <section id="contact" className="py-20 md:py-32 bg-transparent relative transition-colors duration-300">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,8 +54,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
-          <p className="text-gray-600 text-lg">Have a project in mind? I'd love to hear about it</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white transition-colors">Let's Work Together</h2>
+          <p className="text-slate-600 dark:text-zinc-400 text-lg">Have a project in mind? I'd love to hear about it</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -67,12 +67,12 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="p-8 bg-white rounded-xl border-2 border-orange-200 hover:border-primary-500 hover:shadow-xl transition duration-300 text-center"
+              whileHover={{ y: -5 }}
+              className="p-8 bg-white dark:bg-zinc-900/30 rounded-xl border border-slate-200 dark:border-zinc-800/80 hover:border-primary-500 dark:hover:border-primary-500 hover:shadow-xl hover:shadow-primary-500/5 dark:hover:shadow-primary-500/10 transition-all duration-300 text-center"
             >
               <div className="text-5xl mb-4">{info.icon}</div>
-              <h3 className="font-bold text-gray-900 mb-2">{info.label}</h3>
-              <p className="text-primary-600 hover:text-primary-700 transition">{info.value}</p>
+              <h3 className="font-bold text-slate-900 dark:text-white mb-2 transition-colors">{info.label}</h3>
+              <p className="text-primary-600 dark:text-primary-400 font-medium transition-colors">{info.value}</p>
             </motion.a>
           ))}
         </div>
@@ -83,65 +83,65 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto p-8 bg-white rounded-xl border-2 border-orange-200"
+          className="max-w-2xl mx-auto p-8 bg-white dark:bg-zinc-900/30 rounded-xl border border-slate-200 dark:border-zinc-800/80 transition-colors duration-300"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Name</label>
+                <label className="block text-sm font-semibold text-slate-900 dark:text-zinc-200 mb-2 transition-colors">Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-zinc-900/30 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-950/40 transition duration-300"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Email</label>
+                <label className="block text-sm font-semibold text-slate-900 dark:text-zinc-200 mb-2 transition-colors">Email</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-zinc-900/30 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-950/40 transition duration-300"
                   placeholder="your@email.com"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">Subject</label>
+              <label className="block text-sm font-semibold text-slate-900 dark:text-zinc-200 mb-2 transition-colors">Subject</label>
               <input
                 type="text"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-zinc-900/30 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-950/40 transition duration-300"
                 placeholder="Project inquiry"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">Message</label>
+              <label className="block text-sm font-semibold text-slate-900 dark:text-zinc-200 mb-2 transition-colors">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition resize-none"
+                className="w-full px-4 py-3 bg-slate-50 dark:bg-zinc-900/30 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-950/40 transition duration-300 resize-none"
                 placeholder="Tell me about your project..."
               />
             </div>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               type="submit"
               className="w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-vibrant-pink text-white rounded-lg font-semibold hover:shadow-2xl hover:shadow-primary-500/50 transition duration-300"
             >
@@ -152,7 +152,7 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="p-4 bg-green-50 border-2 border-green-300 rounded-lg text-green-700 text-center font-semibold"
+                className="p-4 bg-green-50 dark:bg-green-950/20 border border-green-300 dark:border-green-800/30 rounded-lg text-green-700 dark:text-green-400 text-center font-semibold transition-colors duration-300"
               >
                 ✓ Message sent! I'll get back to you soon.
               </motion.div>
@@ -168,7 +168,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-600 mb-6">Connect with me on social media</p>
+          <p className="text-slate-600 dark:text-zinc-400 mb-6 transition-colors">Connect with me on social media</p>
           <div className="flex items-center justify-center gap-6">
             {[
               { icon: '🐙', link: 'https://github.com/PraveenKumar246', label: 'GitHub' },
@@ -181,7 +181,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title={social.label}
-                className="p-4 rounded-full bg-white border-2 border-orange-200 hover:border-primary-500 hover:bg-primary-50 hover:scale-110 transition duration-300 text-2xl"
+                className="p-4 rounded-full bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-slate-700 dark:text-zinc-300 hover:border-primary-500 dark:hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-950/30 hover:scale-110 transition duration-300 text-2xl"
               >
                 {social.icon}
               </a>

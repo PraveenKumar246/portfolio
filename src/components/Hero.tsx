@@ -39,7 +39,7 @@ export default function Hero() {
         {/* Badge */}
         <motion.div
           variants={itemVariants}
-          className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-primary-100 to-pink-100 text-primary-600 rounded-full text-sm font-semibold"
+          className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-primary-100 to-pink-100 dark:from-primary-950/40 dark:to-pink-950/40 text-primary-600 dark:text-primary-400 rounded-full text-sm font-semibold border border-primary-200/50 dark:border-primary-800/20"
         >
           ✨ Frontend Engineer & Web Developer
         </motion.div>
@@ -51,13 +51,13 @@ export default function Hero() {
         >
           <span className="gradient-text">Build Beautiful</span>
           <br />
-          <span className="text-gray-900">Digital Experiences</span>
+          <span className="text-slate-900 dark:text-white transition-colors">Digital Experiences</span>
         </motion.h1>
 
         {/* Subheading */}
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-slate-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed transition-colors"
         >
           Senior Frontend Engineer with 3+ years of experience building scalable, high-performance web applications. Specializing in React, Next.js, and modern web technologies.
         </motion.p>
@@ -75,7 +75,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="px-8 py-3.5 border-2 border-primary-500 text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition duration-300"
+            className="px-8 py-3.5 border-2 border-primary-500 text-primary-600 dark:text-primary-400 rounded-lg font-semibold hover:bg-primary-50 dark:hover:bg-primary-950/20 transition duration-300"
           >
             Contact Me
           </a>
@@ -90,7 +90,7 @@ export default function Hero() {
             href="https://github.com/PraveenKumar246"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 text-gray-700 hover:bg-primary-500 hover:text-white hover:scale-110 transition duration-300"
+            className="p-3 rounded-full bg-slate-100 dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white hover:scale-110 transition duration-300"
             title="GitHub"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ export default function Hero() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 text-gray-700 hover:bg-vibrant-blue hover:text-white hover:scale-110 transition duration-300"
+            className="p-3 rounded-full bg-slate-100 dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:bg-vibrant-blue dark:hover:bg-vibrant-blue hover:text-white hover:scale-110 transition duration-300"
             title="LinkedIn"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -112,7 +112,7 @@ export default function Hero() {
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-gray-100 text-gray-700 hover:bg-vibrant-blue hover:text-white hover:scale-110 transition duration-300"
+            className="p-3 rounded-full bg-slate-100 dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:bg-vibrant-blue dark:hover:bg-vibrant-blue hover:text-white hover:scale-110 transition duration-300"
             title="Twitter"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
